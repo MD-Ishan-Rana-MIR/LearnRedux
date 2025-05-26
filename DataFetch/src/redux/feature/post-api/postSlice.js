@@ -7,10 +7,12 @@ export const todoApi = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: `https://jsonplaceholder.typicode.com`
     }),
+    tagTypes : ["Posts"],
     endpoints: (build) => ({
         getAllTodo: build.query({
             query: () => `/todos`
-        })
+        }),
+        
     })
 })
 
