@@ -5,6 +5,7 @@ import RegisterForm from "../components/register/RegisterForm";
 import OtpVerify from "../components/register/OtpVerify";
 import UserProfile from "../page/user-profile/UserProfile";
 import ProtectedRoute from "./ProtectedRoute";
+import TodoCreateFrom from "../page/todo/TodoCreateFrom";
 
 export const router = createBrowserRouter([
     {
@@ -20,12 +21,16 @@ export const router = createBrowserRouter([
                 element: <RegisterForm></RegisterForm>
             },
             {
-                path: "/otp-verify",
+                path: "otp-verify",
                 element: <OtpVerify></OtpVerify>
             },
             {
-                path: "/profile",
+                path: "profile",
                 element: <ProtectedRoute><UserProfile></UserProfile></ProtectedRoute>
+            },
+            {
+                path : "create-todo",
+                element : <ProtectedRoute> <TodoCreateFrom></TodoCreateFrom> </ProtectedRoute>
             }
         ]
     }
